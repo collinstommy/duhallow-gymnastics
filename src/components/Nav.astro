@@ -1,0 +1,49 @@
+---
+import Facebook from "../icons/Facebook.astro";
+import Instagram from "../icons/Instagram.astro";
+---
+
+<header class="bg-primary font-semibold text-white">
+  <div class="flex justify-between px-6 py-4 text-lg">
+    <div>Duhallow Gymnastics</div>
+    <button id="toggle-menu">
+      <svg
+        class="fill-white"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        ><path fill="none" d="M0 0h24v24H0z"></path><path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path></svg
+      >
+    </button>
+  </div>
+  <nav
+    id="nav"
+    class="fixed z-10 -right-full h-full w-full bg-primary px-6 transition-all"
+  >
+    <ul>
+      <li><a class="block py-2 hover:underline" href="">Membership</a></li>
+      <li><a class="block py-2 hover:underline" href="">News</a></li>
+      <li><a class="block py-2 hover:underline" href="">What we do</a></li>
+      <li><a class="block py-2 hover:underline" href="">Social</a></li>
+      <li><a class="block py-2 hover:underline" href="">Contact</a></li>
+      <li>
+        <div class="flex gap-2 py-2">
+          <Facebook className="fill-white w-8 h-8" />
+          <Instagram
+            className="fill-white w-8 h-8" 
+          />
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+<script>
+  const button = document.getElementById("toggle-menu");
+  const nav = document.getElementById("nav");
+  button?.addEventListener(
+    "click",
+    () => nav && nav.classList.toggle("right-0")
+  );
+</script>
