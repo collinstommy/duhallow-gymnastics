@@ -8,11 +8,11 @@ import SectionHeading from "./SectionHeading.astro";
 ---
 
 <section
-  class="relative flex flex-col items-center bg-zinc-800 py-12 lg:grid lg:grid-cols-2 lg:items-start lg:py-0"
+  class="relative flex flex-col items-start bg-zinc-800 px-8 py-12 lg:grid lg:grid-cols-2 lg:items-start lg:py-0"
 >
   <div class="absolute left-20 hidden h-full w-5 bg-primary lg:block"></div>
   <div class="lg:ml-60 lg:mt-16">
-    <SectionHeading text="Where to find us" align="left" />
+    <SectionHeading text="Where to find us" align="left" class="ml-8" />
     <div class="mt-8 flex flex-col gap-6">
       <div class="flex gap-4">
         <MapPin />
@@ -51,7 +51,7 @@ import SectionHeading from "./SectionHeading.astro";
       </div>
     </div>
   </div>
-  <div class="mt-8 w-full rounded px-8 lg:hidden">
+  <div class="mt-8 w-full rounded lg:hidden">
     <iframe
       loading="lazy"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1728.6409237059106!2d-9.003725547665923!3d52.21309072907704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844cfdeed671011%3A0x7de0aad48856e625!2sNewmarket%2C%20Co.%20Cork%2C%20P51%20Y016!5e0!3m2!1sen!2sie!4v1675083809597!5m2!1sen!2sie"
