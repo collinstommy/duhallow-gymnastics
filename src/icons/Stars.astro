@@ -1,6 +1,20 @@
-<svg width="46" height="45" viewBox="0 0 46 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9 9L6.54545 15.9091L0 18.5L6.54545 21.0909L9 28L11.4545 21.0909L18 18.5L11.4545 15.9091L9 9Z" fill="#FB5B21"/>
-  <path d="M35 0L32 8L24 11L32 14L35 22L38 14L46 11L38 8L35 0Z" fill="#FB5B21"/>
-  <path d="M26 20L22.4545 29.0909L13 32.5L22.4545 35.9091L26 45L29.5455 35.9091L39 32.5L29.5455 29.0909L26 20Z" fill="#FB5B21"/>
-  </svg>
-  
+---
+const { class: className } = Astro.props;
+---
+
+<svg
+  width="46"
+  height="45"
+  viewBox="0 0 46 45"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class={`fill-primary ${className}`}
+>
+  <path
+    d="M9 9L6.54545 15.9091L0 18.5L6.54545 21.0909L9 28L11.4545 21.0909L18 18.5L11.4545 15.9091L9 9Z"
+  ></path>
+  <path d="M35 0L32 8L24 11L32 14L35 22L38 14L46 11L38 8L35 0Z"></path>
+  <path
+    d="M26 20L22.4545 29.0909L13 32.5L22.4545 35.9091L26 45L29.5455 35.9091L39 32.5L29.5455 29.0909L26 20Z"
+  ></path>
+</svg>

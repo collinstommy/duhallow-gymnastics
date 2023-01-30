@@ -20,7 +20,7 @@ import Instagram from "../icons/Instagram.astro";
   </div>
   <nav
     id="nav"
-    class="fixed z-10 -right-full h-full w-full bg-primary px-6 transition-all"
+    class="fixed z-20 -right-full h-full w-full bg-primary px-6 transition-all"
   >
     <ul>
       <li><a class="block py-2 hover:underline" href="">Membership</a></li>
@@ -30,10 +30,12 @@ import Instagram from "../icons/Instagram.astro";
       <li><a class="block py-2 hover:underline" href="">Contact</a></li>
       <li>
         <div class="flex gap-2 py-2">
-          <Facebook className="fill-white w-8 h-8" />
-          <Instagram
-            className="fill-white w-8 h-8" 
-          />
+          <a href="https://www.facebook.com/duhallowgym"
+          ><Facebook class="fill-white hover:fill-dark" /></a
+        >
+        <a href="https://www.instagram.com/duhallowgymnasticsclub"
+          ><Instagram class="fill-white hover:fill-dark" /></a
+        >
         </div>
       </li>
     </ul>

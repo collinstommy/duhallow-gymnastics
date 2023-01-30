@@ -3,10 +3,20 @@ import Stars from "../icons/Stars.astro";
 import SectionHeading from "./SectionHeading.astro";
 ---
 
-<section class="w-full text-gray-900 px-10 flex items-stretch relative">
-  <div class="max-w-md py-12 px-10">
+<section
+  class="relative flex w-full justify-center px-10 text-dark lg:grid lg:grid-cols-2"
+>
+  <div class="relative hidden lg:flex justify-center p-2 lg:p-0">
+    <img
+      class="my-12 max-h-[500px] z-10"
+      src="assets/group.png"
+      alt="group photo of Patria with kids"
+    />
+    <div class="absolute left-1/2 h-full w-48 bg-primary -translate-x-24"></div>
+  </div>
+  <div class="py-12 px-10 lg:w-full lg:px-36 lg:mt-20">
     <SectionHeading text="Membership" />
-    <p class="leading-tight mb-3">
+    <p class="mb-3 leading-tight">
       For enquires send an email with the following info to: members@gym.com
     </p>
     <ul class="list-disc">

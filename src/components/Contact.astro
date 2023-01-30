@@ -1,0 +1,86 @@
+---
+import Facebook from "../icons/Facebook.astro";
+import Instagram from "../icons/Instagram.astro";
+import MapPin from "../icons/MapPin.astro";
+import Phone from "../icons/Phone.astro";
+import Section from "./Section.astro";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<section
+  class="relative flex flex-col items-center bg-zinc-800 py-12 lg:grid lg:grid-cols-2 lg:items-start lg:py-0"
+>
+  <div class="absolute left-20 hidden h-full w-5 bg-primary lg:block"></div>
+  <div class="lg:ml-60 lg:mt-16">
+    <SectionHeading text="Where to find us" align="left" />
+    <div class="mt-8 flex flex-col gap-6">
+      <div class="flex gap-4">
+        <MapPin />
+        <div>
+          <p>Westend Newmarket,</p>
+          <p>P51 Y016</p>
+          <p>Co Cork,</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <Phone />
+        <div>
+          <p>086 1100 2222</p>
+          <p>P51 Y016</p>
+          <p>Co Cork,</p>
+        </div>
+      </div>
+      <div class="ml-10 flex flex-col gap-2">
+        <h3 class="font-semibold">Follow us</h3>
+        <div class="flex gap-2">
+          <a href="https://www.facebook.com/duhallowgym"
+            ><Facebook class="fill-white hover:fill-primary" /></a
+          >
+          <a href="https://www.instagram.com/duhallowgymnasticsclub"
+            ><Instagram class="fill-white hover:fill-primary" /></a
+          >
+        </div>
+        <div
+          class="mt-4  justify-center bg-zinc-800 py-3 text-base text-white lg:justify-start hidden lg:flex"
+        >
+          Website design by &nbsp;<a
+            class="font-semibold hover:underline"
+            href="https://www.tcollins.dev">Tom Collins</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-8 w-full rounded px-8 lg:hidden">
+    <iframe
+      loading="lazy"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1728.6409237059106!2d-9.003725547665923!3d52.21309072907704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844cfdeed671011%3A0x7de0aad48856e625!2sNewmarket%2C%20Co.%20Cork%2C%20P51%20Y016!5e0!3m2!1sen!2sie!4v1675083809597!5m2!1sen!2sie"
+      width="100%"
+      height="300"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      style="border-radius: 6px;"></iframe>
+  </div>
+
+  <div class="hidden w-full rounded lg:block">
+    <iframe
+      loading="lazy"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1728.6409237059106!2d-9.003725547665923!3d52.21309072907704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844cfdeed671011%3A0x7de0aad48856e625!2sNewmarket%2C%20Co.%20Cork%2C%20P51%20Y016!5e0!3m2!1sen!2sie!4v1675083809597!5m2!1sen!2sie"
+      width="100%"
+      height="600"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      style=""></iframe>
+  </div>
+
+  <div
+    class="mt-6 flex justify-center bg-zinc-800 text-base text-white lg:justify-start lg:hidden"
+  >
+    Website design by &nbsp;<a
+      class="font-semibold hover:underline"
+      href="https://www.tcollins.dev">Tom Collins</a
+    >
+  </div>
+</section>
