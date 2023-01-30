@@ -1,12 +1,12 @@
 ---
 import Stars from "../icons/Stars.astro";
 
-const {text, class: className, align} = Astro.props;
+const {text, class: className, align, id} = Astro.props;
 
 ---
 <div class={`flex items-center ${className} ${align === 'left' ? 'justify-start' : 'justify-center'}`}>
-  <h2 class="mb-8 px-4 text-3xl lg:text-4xl font-semibold heading relative after:bg-primary">{text}
-    <Stars class="absolute right-full top-0" />
+  <h2 id={id} class="mb-8 text-3xl lg:text-4xl font-semibold heading relative after:bg-primary">{text}
+    <Stars class="absolute right-full top-0 mr-4" />
   </h2>
 </div>
 

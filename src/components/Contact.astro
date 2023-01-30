@@ -3,16 +3,15 @@ import Facebook from "../icons/Facebook.astro";
 import Instagram from "../icons/Instagram.astro";
 import MapPin from "../icons/MapPin.astro";
 import Phone from "../icons/Phone.astro";
-import Section from "./Section.astro";
 import SectionHeading from "./SectionHeading.astro";
 ---
 
 <section
-  class="relative flex flex-col items-start bg-zinc-800 px-8 py-12 lg:grid lg:grid-cols-2 lg:items-start lg:py-0"
+  class="relative flex flex-col items-start j bg-zinc-800 px-8 py-12 lg:grid lg:grid-cols-2 lg:items-start lg:px-0 lg:py-0"
 >
   <div class="absolute left-20 hidden h-full w-5 bg-primary lg:block"></div>
   <div class="lg:mt-16 flex flex-col items-center">
-    <SectionHeading text="Where to find us" align="left" class="ml-8" />
+    <SectionHeading text="Where to find us" align="left" id="location" class="ml-12 lg:ml-0"/>
     <div class="mt-8 flex flex-col gap-6">
       <div class="flex gap-4">
         <MapPin />
@@ -31,17 +30,17 @@ import SectionHeading from "./SectionHeading.astro";
         </div>
       </div>
       <div class="ml-10 flex flex-col gap-2">
-        <h3 class="font-semibold">Follow us</h3>
+        <h3 class="font-semibold text-xl">Follow us</h3>
         <div class="flex gap-2">
           <a href="https://www.facebook.com/duhallowgym"
-            ><Facebook class="fill-white hover:fill-primary" /></a
+            ><Facebook class="fill-white hover:fill-primary w-8 h-8" /></a
           >
           <a href="https://www.instagram.com/duhallowgymnasticsclub"
-            ><Instagram class="fill-white hover:fill-primary" /></a
+            ><Instagram class="fill-white hover:fill-primary w-8 h-8 " /></a
           >
         </div>
         <div
-          class="mt-4  justify-center bg-zinc-800 py-3 text-base text-white lg:justify-start hidden lg:flex"
+          class="mt-4 justify-center bg-zinc-800 py-3 text-base text-white lg:justify-start hidden lg:flex"
         >
           Website design by &nbsp;<a
             class="font-semibold hover:underline"
@@ -76,7 +75,7 @@ import SectionHeading from "./SectionHeading.astro";
   </div>
 
   <div
-    class="mt-6 flex justify-center bg-zinc-800 text-base text-white lg:justify-start lg:hidden"
+    class="mt-6 flex justify-center bg-zinc-800 text-base text-white lg:justify-start lg:hidden w-full"
   >
     Website design by &nbsp;<a
       class="font-semibold hover:underline"
