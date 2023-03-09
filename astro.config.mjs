@@ -1,9 +1,21 @@
 import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
+import { loadEnv } from 'vite';
+import storyblok from '@storyblok/astro';
 
-// https://astro.build/config
+const env = loadEnv("", process.cwd(), 'STORYBLOK');
+
 export default defineConfig({
-  integrations: [tailwind()]
+  integrations: [tailwind(),
+    storyblok({
+      accessToken: env.STORYBLOK_TOKEN,
+      components: {
+        newsPage: 'storyblok/News',
+        newsList: 'storyblok/NewsList',
+        home: 'storyblok/Home',
+      },
+      apiOptions: {
+      },
+    })
+  ]
 });

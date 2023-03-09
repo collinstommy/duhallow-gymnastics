@@ -6,6 +6,13 @@ import Membership from '../components/Membership.astro';
 import News from '../components/News.astro';
 import Info from '../components/Info.astro';
 import Contact from '../components/Contact.astro';
+import { useStoryblokApi } from '@storyblok/astro'
+
+const storyblokApi = useStoryblokApi();
+
+const { data } = await storyblokApi.get('cdn/stories/home', {
+  version: import.meta.env.DEV ? "draft" : "published",
+})
 ---
 <Layout title="Welcome to Astro.">
 	<Nav />
@@ -14,5 +21,4 @@ import Contact from '../components/Contact.astro';
 	<News />
 	<Membership />
 	<Contact client:visible />
-	
 </Layout>

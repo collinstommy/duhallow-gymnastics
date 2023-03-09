@@ -3,6 +3,24 @@ import Stars from "../icons/Stars.astro";
 import Cta from "./Cta.astro";
 import Section from "./Section.astro";
 import SectionHeading from "./SectionHeading.astro";
+import { storyblokEditable } from '@storyblok/astro'
+import { useStoryblokApi } from '@storyblok/astro'
+
+const storyblokApi = useStoryblokApi();
+
+const { data } = await storyblokApi.get('cdn/stories?sort_by=created_at:desc', {
+  version: import.meta.env.DEV ? "draft" : "published",
+  content_type: 'newsPage',
+})
+
+const newsItems = data.stories.map(story => {
+  return {
+    title: story.content.title,
+    date: new Date(story.published_at).toLocaleDateString("en-US", {dateStyle: "full"}),
+    description: story.content.description,
+    slug: story.full_slug,
+  }
+})
 ---
 
 <Section class="bg-zinc-800 py-12 flex flex-col items-center relative lg:text-dark lg:py-28">

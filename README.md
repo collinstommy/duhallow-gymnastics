@@ -1,4 +1,7 @@
-# Astro Starter Kit: Basics
+# Duhallow gymmastics
+
+## Set up https for storybook local proxy
+https://www.storyblok.com/faq/setup-dev-server-https-proxy
 
 ```
 npm create astro@latest -- --template basics
