@@ -1,5 +1,12 @@
 ---
 import SectionHeading from "./SectionHeading.astro";
+import { marked } from 'marked';
+import config from '../content/config.json'
+import RichText from './RichText.astro';
+
+const { membership } = config
+
+const content = marked.parse(membership);
 ---
 
 <section
@@ -16,13 +23,6 @@ import SectionHeading from "./SectionHeading.astro";
   </div>
   <div class="py-12 px-10 lg:mt-20 lg:w-full lg:px-36">
     <SectionHeading text="Membership" id="membership" />
-    <p class="mb-3 leading-tight">
-      For enquires send an email with the following info to: members@gym.com
-    </p>
-    <ul class="list-disc">
-      <li>Child's name</li>
-      <li>Date of birth</li>
-      <li>A contact number</li>
-    </ul>
+    <RichText html={content} />
   </div>
 </section>

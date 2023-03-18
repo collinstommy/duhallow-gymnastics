@@ -3,6 +3,11 @@ import Stars from "../icons/Stars.astro";
 import Cta from "./Cta.astro";
 import Section from "./Section.astro";
 import SectionHeading from "./SectionHeading.astro";
+import { getCollection } from 'astro:content';
+
+let allPosts = (await getCollection('news')).sort(
+	(a, b) => b.data.pubDate - a.data.pubDate
+).slice(0, 3);
 ---
 
 <Section class="bg-zinc-800 py-12 flex flex-col items-center relative lg:text-dark lg:py-28">
@@ -12,12 +17,18 @@ import SectionHeading from "./SectionHeading.astro";
     <Stars class="absolute top-2 right-full -translate-x-3 hidden lg:block" />
     <Stars class="absolute top-2 left-full translate-x-3 hidden lg:block" />
     <SectionHeading text="Latest News" id="news" />
-    <div class="px-8 flex flex-col items-start">
-      <article class="lg:px-8">
-        <h3 class="text-2xl font-semibold my-3">Paris 2022</h3>
-        <p>Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices.  Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices.</p>
-        <Cta>Read More</Cta>
-      </article>
+    <div class="lg:px-16 px-6">
+      <div class="flex flex-col items-start">
+        {allPosts.map(({ data, slug }) => (
+        <article class=" my-4">
+          <h3 class="text-2xl font-semibold my-3">{data.title}</h3>
+          <p>{data.description}</p>
+          <Cta href={`news/${slug}`}>Read More</Cta>
+        </article>
+        ))}
+      </div>
+      <a class="text-lg hover:underline bold" href="/news">View all news <span>&#8594;</span></a>
     </div>
+
 </div>
 </Section>
