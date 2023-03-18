@@ -1,44 +1,21 @@
 ---
 import Card from "./Card.astro";
 import SectionHeading from "./SectionHeading.astro";
+import config from '../content/config.json'
+import { marked } from 'marked';
+
+const { info } = config
+
 ---
 
 <section class="py-14 flex flex-col items-center lg:py-20">
   <SectionHeading text="What we do" class="text-dark" id="info" />
-  <div class="grid gap-10 px-6 py-3 lg:justify-center lg:justify-items-center	 lg: lg:grid-cols-[repeat(auto-fit,_30%)]">
-    <Card imageUrl="assets/trip.webp" imageAlt="trip to paris" title="Camps">
-      <p>
-        Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel
-        lectus ultrices. Fusce aliquet erat id arcu facilisis pharetra. Cras
-        rutrum sapien vel lectus ultrices.
-      </p>
-      <p>
-        Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel
-        lectus ultrices.
-      </p>
+  <div class="grid gap-10 px-6 py-3 lg:justify-center sm:grid-cols-[repeat(auto-fit,_45%)] lg:justify-items-center lg:grid-cols-[repeat(auto-fit,_30%)]">
+    {info.map(({ photo, body, title }) => (
+      <Card imageUrl={photo} title={title}>
+      <div set:html={marked.parse(body)} class="prose prose-invert text-white" />
     </Card>
-    <Card imageUrl="assets/trip.webp" imageAlt="trip to paris" title="Camps">
-      <p>
-        Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel
-        lectus ultrices. Fusce aliquet erat id arcu facilisis pharetra. Cras
-        rutrum sapien vel lectus ultrices.
-      </p>
-      <p>
-        Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel
-        lectus ultrices.
-      </p>
-    </Card>
-    <Card imageUrl="assets/trip.webp" imageAlt="trip to paris" title="Camps">
-      <p>
-        Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel
-        lectus ultrices. Fusce aliquet erat id arcu facilisis pharetra. Cras
-        rutrum sapien vel lectus ultrices.
-      </p>
-      <p>
-        Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel
-        lectus ultrices.
-      </p>
-    </Card>
+    ))}
   </div>
 </section>
 <style>

@@ -4,13 +4,17 @@ import Instagram from "../icons/Instagram.astro";
 import MapPin from "../icons/MapPin.astro";
 import Phone from "../icons/Phone.astro";
 import SectionHeading from "./SectionHeading.astro";
+import config from '../content/config.json'
+
+const { phone } = config;
+
 ---
 
 <section
   class="relative flex flex-col items-start j bg-zinc-800 px-8 py-12 lg:grid lg:grid-cols-2 lg:items-start lg:px-0 lg:py-0"
 >
   <div class="absolute left-20 hidden h-full w-5 bg-primary lg:block"></div>
-  <div class="lg:mt-16 flex flex-col items-center">
+  <div class="lg:mt-16 flex flex-col items-center lg:py-8">
     <SectionHeading text="Where to find us" align="left" id="location" class="ml-12 lg:ml-0"/>
     <div class="mt-8 flex flex-col gap-6">
       <div class="flex gap-4">
@@ -21,14 +25,12 @@ import SectionHeading from "./SectionHeading.astro";
           <p>Co Cork,</p>
         </div>
       </div>
-      <div class="flex gap-4">
+      {phone && <div class="flex gap-4">
         <Phone />
         <div>
-          <p>086 1100 2222</p>
-          <p>P51 Y016</p>
-          <p>Co Cork,</p>
+          <p>{phone}</p>
         </div>
-      </div>
+      </div>}
       <div class="ml-10 flex flex-col gap-2">
         <h3 class="font-semibold text-xl">Follow us</h3>
         <div class="flex gap-2">

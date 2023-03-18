@@ -1,0 +1,24 @@
+{
+  "membership": "For enquires send an email with the following info to: members@gym.com\n\n* Child's name\n* Date of birth\n* A contact number",
+  "info": [
+    {
+      "photo": "https://images.unsplash.com/photo-1610414961914-046cb4569020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      "body": "Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices. Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices.\n\nFusce **aliquet** erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices. Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices.\n\nFusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices. Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices.",
+      "title": "Summer Camps",
+      "image": "https://images.unsplash.com/photo-1610414961914-046cb4569020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80"
+    },
+    {
+      "title": "Classes",
+      "body": "Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices. Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices.",
+      "photo": "https://images.unsplash.com/photo-1610414961914-046cb4569020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      "image": "https://images.unsplash.com/photo-1610414961914-046cb4569020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80"
+    },
+    {
+      "title": "Competitions",
+      "body": "Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices. Fusce aliquet erat id arcu facilisis pharetra. Cras rutrum sapien vel lectus ultrices.",
+      "photo": "https://images.unsplash.com/photo-1610414961914-046cb4569020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+      "image": "https://images.unsplash.com/photo-1610414961914-046cb4569020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80"
+    }
+  ],
+  "phone": "086 1100 2222"
+}

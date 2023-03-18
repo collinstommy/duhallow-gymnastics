@@ -1,0 +1,26 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import RichText from '../../components/RichText.astro';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const newsItems = await getCollection('news');
+	return newsItems.map((item) => ({
+		params: { slug: item.slug },
+		props: item,
+	}));
+}
+type Props = CollectionEntry<'news'>;
+const item = Astro.props;
+const { Content } = await item.render();
+---
+<Layout title="Duhallow Gymnastics - News">
+	<main class="flex flex-col items-center ">
+		<article class="prose prose-lg my-10 mx-6">
+			{item.data.image && <img src={item.data.image} alt={item.data.imageAlt}class="rounded-lg" />}
+			<h1 class="">{item.data.title}</h1>
+			<Content />
+		</article>
+	</main>
+</Layout>
+

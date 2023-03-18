@@ -4,9 +4,32 @@ import Instagram from "../icons/Instagram.astro";
 ---
 
 <header class="bg-primary font-semibold text-white">
-  <div class="flex justify-between px-6 py-4 text-lg">
-    <div class="text-xl">Duhallow Gymnastics</div>
-    <button id="toggle-menu">
+  <div class="flex justify-between px-6 py-4 text-lg items-center">
+    <a class="text-2xl hover:underline" href="/">Duhallow Gymnastics</a>
+    <nav
+      id="nav-desktop"
+      class="hidden lg:block"
+    >
+      <ul class="flex items-center gap-5">
+        <li>
+          <a class="block py-3 hover:underline" href="#membership">Membership</a>
+        </li>
+        <li><a class="block py-3 hover:underline" href="/#news">News</a></li>
+        <li><a class="block py-3 hover:underline" href="/#info">What we do</a></li>
+        <li>
+          <a class="block py-3 hover:underline" href="/#location">Location</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/duhallowgym">
+            <Facebook class="fill-white hover:fill-dark w-8 h-8" /></a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/duhallowgymnasticsclub"><Instagram class="fill-white hover:fill-dark w-8 h-8" /></a>
+        </li>
+      </ul>
+    </nav>
+    <button id="toggle-menu" class="lg:hidden">
       <svg
         class="fill-white"
         xmlns="http://www.w3.org/2000/svg"
@@ -19,20 +42,20 @@ import Instagram from "../icons/Instagram.astro";
     </button>
   </div>
   <nav
-    id="nav"
-    class="fixed -right-full z-20 h-full w-full bg-primary px-6 transition-all -mt-1 pt-3"
+    id="nav-mobile"
+    class="fixed -right-full z-20 h-full w-full bg-primary px-6 transition-all -mt-1 pt-3 lg:hidden"
   >
     <ul>
       <li>
-        <a class="text-2xl block py-2 hover:underline" href="#membership">Membership</a>
+        <a class="text-3xl block py-3 hover:underline" href="#membership">Membership</a>
       </li>
-      <li><a class="text-2xl block py-2 hover:underline" href="#news">News</a></li>
-      <li><a class="text-2xl block py-2 hover:underline" href="#info">What we do</a></li>
+      <li><a class="text-3xl block py-3 hover:underline" href="/#news">News</a></li>
+      <li><a class="text-3xl block py-3 hover:underline" href="/#info">What we do</a></li>
       <li>
-        <a class="text-2xl block py-2 hover:underline" href="#location">Location</a>
+        <a class="text-3xl block py-3 hover:underline" href="/#location">Location</a>
       </li>
       <li class="mt-8">
-        <p class="font-bold text-2xl">Follow Us</p>
+        <p class="font-bold text-3xl">Follow Us</p>
         <div class="flex gap-2 py-2">
           <a href="https://www.facebook.com/duhallowgym"
             ><Facebook class="fill-white hover:fill-dark w-8 h-8" /></a
@@ -47,13 +70,14 @@ import Instagram from "../icons/Instagram.astro";
 </header>
 <script>
   const button = document.getElementById("toggle-menu");
-  const nav = document.getElementById("nav");
+  const nav = document.getElementById("nav-mobile");
   const body = document.querySelector("body");
 
   button?.addEventListener("click", () => {
     body && body.classList.toggle("overflow-hidden");
     nav && nav.classList.toggle("right-0");
   });
+
   const links = document.querySelectorAll("#nav li");
   links.forEach(
     (link) =>
