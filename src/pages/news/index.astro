@@ -22,7 +22,7 @@ let allNewsItems = (await getCollection("news")).sort(
 					<article class=" my-4">
 						<h3 class="text-2xl font-semibold my-3">{data.title}</h3>
 						<p>{data.description}</p>
-						<Cta href={`news/${slug}`}>Read More</Cta>
+						<Cta href={`/news/${slug}`}>Read More</Cta>
 					</article>
 					))}
 				</div>
