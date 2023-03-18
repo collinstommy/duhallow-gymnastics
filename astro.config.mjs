@@ -30,7 +30,8 @@ export default defineConfig({
                   { label: 'Text', name: 'body', widget: 'markdown', },
                   { label: "Image", name: "image", widget: "image" },
                 ]
-              }
+              },
+              { label: "Phone Number", name: "phone", widget: "string" },
             ]
           }]
         },

@@ -4,6 +4,10 @@ import Instagram from "../icons/Instagram.astro";
 import MapPin from "../icons/MapPin.astro";
 import Phone from "../icons/Phone.astro";
 import SectionHeading from "./SectionHeading.astro";
+import config from '../content/config.json'
+
+const { phone } = config;
+
 ---
 
 <section
@@ -21,14 +25,12 @@ import SectionHeading from "./SectionHeading.astro";
           <p>Co Cork,</p>
         </div>
       </div>
-      <div class="flex gap-4">
+      {phone && <div class="flex gap-4">
         <Phone />
         <div>
-          <p>086 1100 2222</p>
-          <p>P51 Y016</p>
-          <p>Co Cork,</p>
+          <p>{phone}</p>
         </div>
-      </div>
+      </div>}
       <div class="ml-10 flex flex-col gap-2">
         <h3 class="font-semibold text-xl">Follow us</h3>
         <div class="flex gap-2">
