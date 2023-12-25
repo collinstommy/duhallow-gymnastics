@@ -10,10 +10,10 @@ const { info } = config
 
 <section class="py-14 flex flex-col items-center lg:py-20">
   <SectionHeading text="What we do" class="text-dark" id="info" />
-  <div class="grid gap-10 px-6 py-3 lg:justify-center sm:grid-cols-[repeat(auto-fit,_45%)] lg:justify-items-center lg:grid-cols-[repeat(auto-fit,_30%)]">
+  <div class="grid gap-6 px-6 py-3 lg:justify-center sm:grid-cols-[repeat(auto-fit,_45%)] lg:justify-items-center lg:grid-cols-2 lg:px-12">
     {info.map(({ photo, body, title }) => (
       <Card imageUrl={photo} title={title}>
-      <div set:html={marked.parse(body)} class="prose prose-invert text-white" />
+      <div set:html={marked.parse(body)} class="prose prose-invert text-dark" />
     </Card>
     ))}
   </div>

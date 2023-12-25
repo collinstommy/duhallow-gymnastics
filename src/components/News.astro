@@ -9,7 +9,7 @@ let allPosts = (await getCollection('news')).sort(
 	(a, b) => b.data.pubDate - a.data.pubDate
 ).slice(0, 3);
 ---
-
+{allPosts.length &&
 <Section class="bg-zinc-800 py-12 flex flex-col items-center relative lg:text-dark lg:py-28">
   <div class="hidden lg:block absolute h-3 bg-primary w-full top-48">
   </div>
@@ -31,4 +31,4 @@ let allPosts = (await getCollection('news')).sort(
     </div>
 
 </div>
-</Section>
+</Section>}

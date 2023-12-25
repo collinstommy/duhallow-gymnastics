@@ -7,6 +7,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind(), NetlifyCMS({
     config: {
+      local_backend: true,
       backend: {
         name: 'git-gateway',
         branch: 'main',
@@ -28,7 +29,7 @@ export default defineConfig({
                 fields: [
                   { label: "Title", name: "title", widget: "string" },
                   { label: 'Text', name: 'body', widget: 'markdown', },
-                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Image", name: "image", widget: "image", required: false },
                 ]
               },
               { label: "Phone Number", name: "phone", widget: "string" },
