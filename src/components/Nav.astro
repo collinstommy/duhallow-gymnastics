@@ -82,13 +82,17 @@ const hasPosts = allPosts.length > 0;
     nav && nav.classList.toggle("right-0");
   });
 
-  const links = document.querySelectorAll("#nav li");
-  links.forEach(
-    (link) =>
+  const handleClick =
+    (link: HTMLAnchorElement) =>
       link &&
       link.addEventListener("click", () => {
         nav && nav.classList.remove("right-0");
         body && body.classList.toggle("overflow-hidden");
       })
-  );
+
+
+  const links = document.querySelectorAll<HTMLAnchorElement>("#nav li");
+  const mobileLinks = document.querySelectorAll<HTMLAnchorElement>("#nav-mobile li");
+  links.forEach(handleClick);
+  mobileLinks.forEach(handleClick);
 </script>
