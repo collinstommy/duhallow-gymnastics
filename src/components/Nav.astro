@@ -1,6 +1,10 @@
 ---
 import Facebook from "../icons/Facebook.astro";
 import Instagram from "../icons/Instagram.astro";
+import { getCollection } from 'astro:content';
+
+let allPosts = (await getCollection('news'));
+const hasPosts = allPosts.length > 0;
 ---
 
 <header class="bg-primary font-semibold text-white">
@@ -14,7 +18,7 @@ import Instagram from "../icons/Instagram.astro";
         <li>
           <a class="block py-3 hover:underline" href="#membership">Membership</a>
         </li>
-        <li><a class="block py-3 hover:underline" href="/#news">News</a></li>
+        {hasPosts && <li><a class="block py-3 hover:underline" href="/#news">News</a></li>}
         <li><a class="block py-3 hover:underline" href="/#info">What we do</a></li>
         <li>
           <a class="block py-3 hover:underline" href="/#location">Location</a>
